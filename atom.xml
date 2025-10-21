@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>碎片</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-10-21T05:53:51.513Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Kaleidoscope</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>狗屎</title>
+    <link href="http://example.com/2025/10/21/%E7%8B%97%E5%B1%8E/"/>
+    <id>http://example.com/2025/10/21/%E7%8B%97%E5%B1%8E/</id>
+    <published>2025-10-21T05:44:42.000Z</published>
+    <updated>2025-10-21T05:53:51.513Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo的数学渲染Bug太多了</p><p>MD和Mathjax的双重渲染会出很多错误</p><p>网上的解决方法又和主题不兼容</p><p>最后摸索出一个方案：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\&#123; \&#125; \_ \$ (无法正常显示)</span><br></pre></td></tr></table></figure><p>替换成：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\&#123; \\&#125; \\_ \\$ （可以正常显示）</span><br></pre></td></tr></table></figure><p>虽不知为何可以，可直觉让我猜出了这个能让一坨Bug正确运行的方法</p><p>可耗费的时间精力又有谁补偿给我</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hexo的数学渲染Bug太多了&lt;/p&gt;
+&lt;p&gt;MD和Mathjax的双重渲染会出很多错误&lt;/p&gt;
+&lt;p&gt;网上的解决方法又和主题不兼容&lt;/p&gt;
+&lt;p&gt;最后摸索出一个方案：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="shit" scheme="http://example.com/categories/shit/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>练习#1-P2672</title>
+    <link href="http://example.com/2025/10/20/%E7%BB%83%E4%B9%A0-1-P2672/"/>
+    <id>http://example.com/2025/10/20/%E7%BB%83%E4%B9%A0-1-P2672/</id>
+    <published>2025-10-20T12:50:12.000Z</published>
+    <updated>2025-10-21T05:05:02.934Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P2672">Link</a></p><h3 id="贪心策略证明：">贪心策略证明：</h3><p>总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值</p><p>按住户疲劳值排序，选前X的住户得到方案I</p><p>由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值</p><p>那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一项最大化，取 $$max(s[i]+2*d[i])$$</p><p>最后只需比较该取法和方案I，取疲劳值大的那个即可</p><p>PS：自然语言还是太啰嗦了，下次尝试用符号来刻画</p><p>上面最大化对应集合表述应是：$$max\{S\}=max\{A \cap B\}=max\{A \cap \{max\{B\}\}\}$$，即将子部分最大而化简整个方案集合（给这种靠感觉的变化打个正确性补丁）</p><h3 id="为什么想了很久：">为什么想了很久：</h3><p>在简化，抽象化的过程中，抛弃了题目的特殊性，导致方向错误</p><p>N种数列：$\{a_{i,n}\},1\le i \le N$<br>不可能在$O(nlogn)$内求出$$max\{\ \sum_{1\le i_1 \le …i_N \le len} a_{sub \_ index(i),i_1} \}$$</p><p>这题的特殊性在于附加权的单调性，而不是数列的重复</p><h3 id="启发：">启发：</h3><p>注意思维的跳跃性</p><p>深搜，碰壁，返回所需的时间太久了</p><p>跳跃性的转换思维，广搜，才容易迅速找到正解</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P2672&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;贪心策略证明：&quot;&gt;贪心策略证明：&lt;/h3&gt;
+&lt;p&gt;总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值&lt;/p&gt;
+&lt;p&gt;按住户疲劳值排序，选</summary>
+      
+    
+    
+    
+    <category term="ACM_P" scheme="http://example.com/categories/ACM-P/"/>
+    
+    
+    <category term="Luogu" scheme="http://example.com/tags/Luogu/"/>
+    
+    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+</feed>
