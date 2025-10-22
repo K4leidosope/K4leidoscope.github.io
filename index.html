@@ -174,8 +174,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        高精度
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596class INT ...
+        <h3 id="高精度">高精度</h3>
     
 
         <a href="/2025/10/21/%E6%A8%A1%E6%9D%BF%E6%95%B4%E7%90%86/" class="post-more waves-effect waves-button">
@@ -222,27 +221,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        hexo的数学渲染Bug太多了
-MD和Mathjax的双重渲染会出很多错误
-网上的解决方法又和主题不兼容
-最后乱猜出一个方案：
-1\&#123; \&#125; \_ \$ (无法正常显示)
-替换成：
-1\\&#123; \\&#125; \\_ \\$ （可以正常显示）
-虽不知为何可以，可这确实能让一坨Bug较为正常地运行
-似乎可以从中窥见内部代码有多么构思了
+        <p>hexo的数学渲染Bug太多了</p>
+<p>MD和Mathjax的双重渲染会出很多错误</p>
+<p>网上的解决方法又和主题不兼容</p>
+<p>最后乱猜出一个方案：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\&#123; \&#125; \_ \$ (无法正常显示)</span><br></pre></td></tr></table></figure>
+<p>替换成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\&#123; \\&#125; \\_ \\$ （可以正常显示）</span><br></pre></td></tr></table></figure>
+<p>虽不知为何可以，可这确实能让一坨Bug较为正常地运行</p>
+<p>似乎可以从中窥见内部代码有多么构思了</p>
 
     
 
         <a href="/2025/10/21/%E7%8B%97%E5%B1%8E/" class="post-more waves-effect waves-button">
             Continue reading...
         </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/brainfuck/" rel="tag">brainfuck</a></li></ul>
-
     </div>
     
 </article>
@@ -278,12 +271,25 @@ MD和Mathjax的双重渲染会出很多错误
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Link
-贪心策略证明：
-总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值
-按住户疲劳值排序，选前X的住户得到方案I
-由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值
-那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一...
+        <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2672">Link</a></p>
+<h3 id="贪心策略证明：">贪心策略证明：</h3>
+<p>总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值</p>
+<p>按住户疲劳值排序，选前X的住户得到方案I</p>
+<p>由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值</p>
+<p>那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一项最大化，取 $$max(s[i]+2*d[i])$$</p>
+<p>最后只需比较该取法和方案I，取疲劳值大的那个即可</p>
+<p>PS：自然语言还是太啰嗦了，下次尝试用符号来刻画</p>
+<p>上面最大化对应集合表述应是：$$max\{S\}=max\{A \cap B\}=max\{A \cap \{max\{B\}\}\}$$，即将子部分最大而化简整个方案集合（给这种靠感觉的变化打个正确性补丁）</p>
+<h3 id="为什么想了很久：">为什么想了很久：</h3>
+<p>在简化，抽象化的过程中，抛弃了题目的特殊性，导致方向错误</p>
+<p>N种数列：$\{a_{i,n}\},1\le i \le N$<br>
+不可能在$O(nlogn)$内求出$$max\{\ \sum_{1\le i_1 \le …i_N \le len} a_{sub \_ index(i),i_1} \}$$</p>
+<p>这题的特殊性在于附加权的单调性，而不是数列的重复</p>
+<h3 id="启发：">启发：</h3>
+<p>注意思维的跳跃性</p>
+<p>深搜，碰壁，返回所需的时间太久了</p>
+<p>跳跃性的转换思维，广搜，才容易迅速找到正解</p>
+
     
 
         <a href="/2025/10/20/%E7%BB%83%E4%B9%A0-1-P2672/" class="post-more waves-effect waves-button">
