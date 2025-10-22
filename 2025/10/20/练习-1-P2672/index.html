@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="Luogu,贪心">
-    <meta name="description" content="Link 贪心策略证明： 总疲劳值&#x3D;选取的住户疲劳值之和+最远端路程疲劳值 按住户疲劳值排序，选前X的住户得到方案I 由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值 那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一项最大">
+    <meta name="description" content="Link 贪心策略证明： 总疲劳值&#x3D;选取的住户疲劳值之和+最远端路程疲劳值 按住户疲劳值排序，选前X的住户得到方案I 由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习#1-P2672">
 <meta property="og:url" content="http://example.com/2025/10/20/%E7%BB%83%E4%B9%A0-1-P2672/index.html">
 <meta property="og:site_name" content="碎片">
-<meta property="og:description" content="Link 贪心策略证明： 总疲劳值&#x3D;选取的住户疲劳值之和+最远端路程疲劳值 按住户疲劳值排序，选前X的住户得到方案I 由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值 那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一项最大">
+<meta property="og:description" content="Link 贪心策略证明： 总疲劳值&#x3D;选取的住户疲劳值之和+最远端路程疲劳值 按住户疲劳值排序，选前X的住户得到方案I 由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-10-20T12:50:12.000Z">
-<meta property="article:modified_time" content="2025-10-21T05:05:02.934Z">
+<meta property="article:modified_time" content="2025-10-22T01:04:55.398Z">
 <meta property="article:author" content="Kaleidoscope">
 <meta property="article:tag" content="Luogu">
 <meta property="article:tag" content="贪心">
@@ -192,6 +192,7 @@
 <p>总疲劳值=选取的住户疲劳值之和+最远端路程疲劳值</p>
 <p>按住户疲劳值排序，选前X的住户得到方案I</p>
 <p>由最远端路程疲劳值的单调性知：最远端位置小于I的最远位置对应方案总疲劳值小于I的总疲劳值</p>
+<span id="more"></span>
 <p>那么疲劳值最大的选法，其最远端位置必然大于等于I的最远端位置。对于最远端位置大于I的选法，剩余的X-1个待选位置需最大化，即取住户疲劳值前X-1项，此时这些选法前X-1项固定，只需最后一项最大化，取 $$max(s[i]+2*d[i])$$</p>
 <p>最后只需比较该取法和方案I，取疲劳值大的那个即可</p>
 <p>PS：自然语言还是太啰嗦了，下次尝试用符号来刻画</p>
@@ -213,7 +214,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2025-10-21T05:05:02.934Z" itemprop="dateUpdated">2025-10-21 13:05:02</time>
+    Last updated: <time datetime="2025-10-22T01:04:55.398Z" itemprop="dateUpdated">2025-10-22 09:04:55</time>
 </span><br>
 
 
