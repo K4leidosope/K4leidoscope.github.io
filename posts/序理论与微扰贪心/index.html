@@ -4,12 +4,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>序理论与微扰贪心 - 碎片</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="序理论：
 定义与STL：
-二元关系：$a \prec b$具有连接性，传递性，非对称性" />
+严格全序：
+$a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/%E5%BA%8F%E7%90%86%E8%AE%BA%E4%B8%8E%E5%BE%AE%E6%89%B0%E8%B4%AA%E5%BF%83/">
   <meta property="og:site_name" content="碎片">
   <meta property="og:title" content="序理论与微扰贪心">
-  <meta property="og:description" content="序理论： 定义与STL： 二元关系：$a \prec b$具有连接性，传递性，非对称性">
+  <meta property="og:description" content="序理论： 定义与STL： 严格全序： $a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +23,8 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="序理论与微扰贪心">
-  <meta name="twitter:description" content="序理论： 定义与STL： 二元关系：$a \prec b$具有连接性，传递性，非对称性">
+  <meta name="twitter:description" content="序理论： 定义与STL： 严格全序： $a \prec b$：连接性，传递性，非对称性
+用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -69,11 +73,40 @@
           <div class="meta">Posted on Oct 23, 2025</div>
         </div>
         
+        <div class="tldr">
+          <strong>tl;dr:</strong>
+          无趣漫长的模板化严格化证明，靠直觉A题才是对的
+        </div>
         <section class="body">
           <h2 id="序理论">序理论：</h2>
 <h3 id="定义与stl">定义与STL：</h3>
-<p>二元关系：$a \prec b$具有连接性，传递性，非对称性</p>
-
+<h4 id="严格全序">严格全序：</h4>
+<p>$a \prec b$：连接性，传递性，非对称性</p>
+<p>用sort可求出唯一的序列，使得：任取序列前后两元素a，b，有$a \prec b$成立</p>
+<p>证明：建图，入度为0的点数始终为1，无环，拓扑序存在</p>
+<p>或：m在序列中的位置：$n \prec m$，成立的n的个数+1</p>
+<h4 id="弱序">弱序：</h4>
+<p>$a \preceq b$：连接性，传递性</p>
+<p>注意：存在等价关系：$a\sim b : a \preceq b且b \preceq a$（传递性，对称性）</p>
+<p>用sort可求出序列，使得：任取序列前后两元素a，b，有$a \preceq b$成立</p>
+<p>且等价元素相邻，交换等价元素，仍是有效的数列</p>
+<p>证明：建图，等价元素用一个点表示，点之间用有向边代表各自等价元素的关系，此时图中点的建边关系构成严格全序，沿用之前的证明即可</p>
+<ul>
+<li>Attention：STL的<code>sort</code>自定义序关系需定义成严格全序，等价元素需返回0（否则会越界），其会给出一种可行的序列（具有稳定性）</li>
+</ul>
+<h2 id="微扰贪心">微扰贪心：</h2>
+<p>做法易想，但严格证明是不显然的</p>
+<h3 id="一种可能的类型">一种可能的类型：</h3>
+<p>求序列$\{a_n\}$使得$f(\{a_n\})$最大</p>
+<p>记关系$a \preceq b$为交换序列中相邻的ab，f()不增大（存在等价关系）</p>
+<p>最优序列：A：对于其中任意相邻两项有$a \preceq b$成立</p>
+<p>若能证明$a \preceq b$是弱序关系（+连接性，传递性），根据上述理论，用sort可求出和A具有相同性质的序列B、</p>
+<p>再容易看出：交换等价项，A和B可相互得到，交换时f()不变，故f(A)=f(B)，B亦是最优的序列</p>
+<h3 id="eg-p1080-">Eg: <a href="https://www.luogu.com.cn/problem/P1080">P1080 [NOIP 2012 提高组] 国王游戏</a></h3>
+<ul>
+<li>题目中的舍弃取整的等价性是不显然的，但直觉表明舍弃是对的</li>
+<li>排序得到序列A，最优序列是序列B，需注意到B相邻的元素可能没有关系$\preceq$成立，A，B不是通过简单的交换等价项得到的，而是需要构造更复杂的整体max不变的交换方式（可以构造，懒得写了）</li>
+</ul>
         </section>
         <div class="post-tags">
           
