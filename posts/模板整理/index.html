@@ -68,6 +68,8 @@
         
         <section class="body">
           <h2 id="高精度">高精度</h2>
+<details>
+<summary>code</summary>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#cf222e">struct</span> <span style="color:#1f2328">INT</span> <span style="color:#1f2328">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#cf222e">static</span> <span style="color:#cf222e">const</span> <span style="color:#cf222e">int</span> base <span style="color:#0550ae">=</span> <span style="color:#0550ae">1000000000</span><span style="color:#1f2328">;</span> <span style="color:#57606a">// 1e9
 </span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">static</span> <span style="color:#cf222e">const</span> <span style="color:#cf222e">int</span> base_digits <span style="color:#0550ae">=</span> <span style="color:#0550ae">9</span><span style="color:#1f2328">;</span>
@@ -344,7 +346,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#57606a">// IO helpers
 </span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>ostream<span style="color:#0550ae">&amp;</span> <span style="color:#cf222e">operator</span><span style="color:#0550ae">&lt;&lt;</span><span style="color:#1f2328">(</span>ostream <span style="color:#0550ae">&amp;</span>os<span style="color:#1f2328">,</span> <span style="color:#cf222e">const</span> INT <span style="color:#0550ae">&amp;</span>v<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">return</span> os <span style="color:#0550ae">&lt;&lt;</span> v<span style="color:#1f2328">.</span>toString<span style="color:#1f2328">();</span> <span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>istream<span style="color:#0550ae">&amp;</span> <span style="color:#cf222e">operator</span><span style="color:#0550ae">&gt;&gt;</span><span style="color:#1f2328">(</span>istream <span style="color:#0550ae">&amp;</span>is<span style="color:#1f2328">,</span> INT <span style="color:#0550ae">&amp;</span>v<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span> string s<span style="color:#1f2328">;</span> is <span style="color:#0550ae">&gt;&gt;</span> s<span style="color:#1f2328">;</span> v<span style="color:#1f2328">.</span>read<span style="color:#1f2328">(</span>s<span style="color:#1f2328">);</span> <span style="color:#cf222e">return</span> is<span style="color:#1f2328">;</span> <span style="color:#1f2328">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div></details>
         </section>
         <div class="post-tags">
           
