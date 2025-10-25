@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeforces on 碎片</title>
+    <link>https://k4leidoscope.github.io/tags/codeforces/</link>
+    <description>Recent content in Codeforces on 碎片</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>Kaleidoscope</copyright>
+    <lastBuildDate>Sat, 25 Oct 2025 17:26:53 +0800</lastBuildDate>
+    <atom:link href="https://k4leidoscope.github.io/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tricks from cf</title>
+      <link>https://k4leidoscope.github.io/posts/tricks/</link>
+      <pubDate>Sat, 25 Oct 2025 17:26:53 +0800</pubDate>
+      <guid>https://k4leidoscope.github.io/posts/tricks/</guid>
+      <description>&lt;p&gt;这是摘要&#xA;​&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
