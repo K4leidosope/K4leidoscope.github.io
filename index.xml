@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Kaleidoscope</copyright>
-    <lastBuildDate>Sat, 25 Oct 2025 17:26:53 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2025 20:20:34 +0800</lastBuildDate>
     <atom:link href="https://k4leidoscope.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客标题</title>
+      <link>https://k4leidoscope.github.io/posts/%E4%B8%89%E7%A7%8D%E6%80%9D%E7%BB%B4/</link>
+      <pubDate>Sun, 26 Oct 2025 20:20:34 +0800</pubDate>
+      <guid>https://k4leidoscope.github.io/posts/%E4%B8%89%E7%A7%8D%E6%80%9D%E7%BB%B4/</guid>
+      <description>&lt;p&gt;​&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tricks from cf</title>
       <link>https://k4leidoscope.github.io/posts/tricks/</link>
@@ -28,7 +35,7 @@
       <link>https://k4leidoscope.github.io/posts/%E5%91%BD%E5%90%8D/</link>
       <pubDate>Thu, 23 Oct 2025 19:18:35 +0800</pubDate>
       <guid>https://k4leidoscope.github.io/posts/%E5%91%BD%E5%90%8D/</guid>
-      <description>&lt;p&gt;人类对世界的理解就是命名&lt;/p&gt;&#xA;&lt;p&gt;用符号对抽象的，具象的一切命名&lt;/p&gt;&#xA;&lt;p&gt;命名的实质是建立事物和符号的双射&lt;/p&gt;</description>
+      <description>&lt;p&gt;人类对世界的理解就是命名&lt;/p&gt;&#xA;&lt;p&gt;用符号对抽象的，具象的一切命名&lt;/p&gt;&#xA;&lt;p&gt;命名的实质是建立事物和符号的一一对应&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
