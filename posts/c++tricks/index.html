@@ -16,6 +16,22 @@ auto ask = [&amp;](int i, int x) -&gt; int {
 PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量）
 [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容
 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型
+
+Stackoverflow:
+void f() {
+  static int a[100000000];
+}
+将局部变量和全局变量一样放在静态区
+而非栈内（只有几Mb的空间限制），有效防止栈溢出
+且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
+STL:
+Vector:
+时间复杂度和用数组维护是相当的
+除insert()，erase()外基本是常数级别
+其长度可变，实时的增删，遍历，按下标访问，初始化很方便
+ACM中可用于维护集合增减和方便地遍历
+for(auto item: items){}  //按内部元素进行遍历
+vector a(100,0);  //初始化为100个0
 " />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://k4leidoscope.github.io/posts/c&#43;&#43;tricks/">
@@ -23,7 +39,14 @@ PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局�
   <meta property="og:title" content="Tricks from C&#43;&#43;">
   <meta property="og:description" content="Lambda表达式： 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 Stackoverflow: void f() { static int a[100000000]; } 将局部变量和全局变量一样放在静态区
+而非栈内（只有几Mb的空间限制），有效防止栈溢出
+且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
+STL: Vector: 时间复杂度和用数组维护是相当的
+除insert()，erase()外基本是常数级别
+其长度可变，实时的增删，遍历，按下标访问，初始化很方便
+ACM中可用于维护集合增减和方便地遍历
+for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始化为100个0">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -35,7 +58,14 @@ auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt;
   <meta name="twitter:title" content="Tricks from C&#43;&#43;">
   <meta name="twitter:description" content="Lambda表达式： 在函数内定义伪函数，便于传递给函数指针作为参数的其他函数
 ACM中利用其引用特性可优雅地处理局部变量，或者创建用于交互的函数
-auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型">
+auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt; (i&#43;1) &lt;&lt; &#39; &#39; &lt;&lt; x &lt;&lt; &#39;\n&#39;; cout &lt;&lt; flush; int val; cin &gt;&gt; val; return val; }; PS:[&amp;]表示捕获引用（直接访问定义匿名函数的函数中的局部变量） [=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容 -&gt;int是可省的，c&#43;&#43;11以上编译可推断返回类型 Stackoverflow: void f() { static int a[100000000]; } 将局部变量和全局变量一样放在静态区
+而非栈内（只有几Mb的空间限制），有效防止栈溢出
+且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量
+STL: Vector: 时间复杂度和用数组维护是相当的
+除insert()，erase()外基本是常数级别
+其长度可变，实时的增删，遍历，按下标访问，初始化很方便
+ACM中可用于维护集合增减和方便地遍历
+for(auto item: items){} //按内部元素进行遍历 vector a(100,0); //初始化为100个0">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -100,7 +130,22 @@ auto ask = [&amp;](int i, int x) -&gt; int { cout &lt;&lt; &#34;? &#34; &lt;&lt;
 <li>[=]表示捕获值，在创建lambda表达式时内部创建捕获变量的拷贝，后续调用时亦是访问拷贝中的内容</li>
 <li>-&gt;int是可省的，c++11以上编译可推断返回类型</li>
 </ul>
-
+<h2 id="stackoverflow">Stackoverflow:</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#cf222e">void</span> <span style="color:#6639ba">f</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">static</span> <span style="color:#cf222e">int</span> a<span style="color:#1f2328">[</span><span style="color:#0550ae">100000000</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>将局部变量和全局变量一样放在静态区</p>
+<p>而非栈内（只有几Mb的空间限制），有效防止栈溢出</p>
+<p>且提高CF题目代码效率，这样只有其他函数需共用全局变量时才用定义全局变量</p>
+<h2 id="stl">STL:</h2>
+<h3 id="vector">Vector:</h3>
+<p>时间复杂度和用数组维护是相当的</p>
+<p>除<code>insert()</code>，<code>erase()</code>外基本是常数级别</p>
+<p>其长度可变，实时的增删，遍历，按下标访问，初始化很方便</p>
+<p>ACM中可用于维护集合增减和方便地遍历</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">auto</span> <span style="color:#900;font-weight:bold">item</span><span style="color:#1f2328">:</span> items<span style="color:#1f2328">){}</span>  <span style="color:#57606a">//按内部元素进行遍历
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>vector <span style="color:#6639ba">a</span><span style="color:#1f2328">(</span><span style="color:#0550ae">100</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span>  <span style="color:#57606a">//初始化为100个0
+</span></span></span></code></pre></div>
         </section>
         <div class="post-tags">
           

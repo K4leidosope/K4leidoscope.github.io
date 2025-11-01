@@ -17,10 +17,17 @@
       <description></description>
     </item>
     <item>
-      <title>Codeforces，题解</title>
-      <link>https://k4leidoscope.github.io/tags/codeforces%E9%A2%98%E8%A7%A3/</link>
+      <title>Codeforces</title>
+      <link>https://k4leidoscope.github.io/tags/codeforces/</link>
       <pubDate>Tue, 28 Oct 2025 11:28:14 +0800</pubDate>
-      <guid>https://k4leidoscope.github.io/tags/codeforces%E9%A2%98%E8%A7%A3/</guid>
+      <guid>https://k4leidoscope.github.io/tags/codeforces/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>题解</title>
+      <link>https://k4leidoscope.github.io/tags/%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Tue, 28 Oct 2025 11:28:14 +0800</pubDate>
+      <guid>https://k4leidoscope.github.io/tags/%E9%A2%98%E8%A7%A3/</guid>
       <description></description>
     </item>
     <item>
@@ -28,13 +35,6 @@
       <link>https://k4leidoscope.github.io/tags/%E6%80%9D%E8%80%83/</link>
       <pubDate>Sun, 26 Oct 2025 20:20:34 +0800</pubDate>
       <guid>https://k4leidoscope.github.io/tags/%E6%80%9D%E8%80%83/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Codeforces</title>
-      <link>https://k4leidoscope.github.io/tags/codeforces/</link>
-      <pubDate>Sat, 25 Oct 2025 17:26:53 +0800</pubDate>
-      <guid>https://k4leidoscope.github.io/tags/codeforces/</guid>
       <description></description>
     </item>
     <item>
@@ -63,13 +63,6 @@
       <link>https://k4leidoscope.github.io/tags/luogu/</link>
       <pubDate>Mon, 20 Oct 2025 20:50:12 +0000</pubDate>
       <guid>https://k4leidoscope.github.io/tags/luogu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>题解</title>
-      <link>https://k4leidoscope.github.io/tags/%E9%A2%98%E8%A7%A3/</link>
-      <pubDate>Mon, 20 Oct 2025 20:50:12 +0000</pubDate>
-      <guid>https://k4leidoscope.github.io/tags/%E9%A2%98%E8%A7%A3/</guid>
       <description></description>
     </item>
   </channel>
